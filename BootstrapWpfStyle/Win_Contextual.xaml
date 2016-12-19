@@ -1,0 +1,23 @@
+﻿<Window x:Class="BootstrapWpfStyle.Win_Contextual"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="语境" Height="300" Width="500">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock>源码:1128-1215行</TextBlock>
+            <Label Content="前景色"></Label>
+            <Label Content="text-muted：提示，使用浅灰色" Style="{DynamicResource text-muted}"></Label>
+            <Label Content="text-primary：主要，使用蓝色" Style="{DynamicResource text-primary}"></Label>
+            <Label Content="text-success：成功，使用浅绿色" Style="{DynamicResource text-success}"></Label>
+            <Label Content="text-info：通知信息，使用浅蓝色" Style="{DynamicResource text-info}"></Label>
+            <Label Content="text-warning：警告，使用黄色" Style="{DynamicResource text-warning}"></Label>
+            <Label Content="text-danger：危险，使用褐色" Style="{DynamicResource text-danger}"></Label>
+            <Label Content="背景色"></Label>
+            <Label Content="text bg-primary：主要，使用蓝色，Foreground使用白色" Style="{DynamicResource text bg-primary}"></Label>
+            <Label Content="text bg-success：成功，使用浅绿色" Style="{DynamicResource text bg-success}"></Label>
+            <Label Content="text bg-info：通知信息，使用浅蓝色" Style="{DynamicResource text bg-info}"></Label>
+            <Label Content="text bg-warning：警告，使用黄色" Style="{DynamicResource text bg-warning}"></Label>
+            <Label Content="text bg-danger：危险，使用褐色" Style="{DynamicResource text bg-danger}"></Label>
+        </StackPanel>
+    </Grid>
+</Window>

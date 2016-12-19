@@ -1,0 +1,20 @@
+﻿<Window x:Class="BootstrapWpfStyle.Win_InputGroup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="输入组" Height="400" Width="500">
+    <Window.Resources>
+        <PathGeometry x:Key="PathDataSearch">M12.003748,4.5049986C10.494726,4.5309996 8.9806971,4.987008 7.7016882,5.9000024 4.5866403,8.1250076 4.0476317,12.220008 6.5006675,15.049994 8.9517054,17.875006 13.465759,18.364996 16.581798,16.140005 19.698844,13.915 20.235855,9.8199996 17.783826,6.9899983 16.404809,5.3980035 14.373776,4.5479979 12.305754,4.5049986 12.205747,4.5029997 12.104748,4.5029997 12.003748,4.5049986z M12.127743,2.0721107E-06C15.724792,-0.0019966637 19.286836,1.4420032 21.684881,4.2050108 25.103918,8.1500015 25.075918,13.549994 22.002878,17.435003L31.444,28.325001 26.299932,32.000002 16.892806,21.15C11.969737,23.054996 6.0676631,21.830006 2.5996136,17.834997 -1.5464387,13.049994 -0.63543081,6.1250085 4.6346449,2.3600098 6.8586745,0.77200525 9.5027079,0.0010016877 12.127743,2.0721107E-06z</PathGeometry>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBox Text="左边带按钮的输入组" Tag="GO!" Margin="5" Style="{DynamicResource input-group-btn left}" Button.Click="InputGroupButton_Click"></TextBox>
+            <TextBox Text="右边带按钮的输入组" Margin="5" Style="{DynamicResource input-group-btn right}" Button.Click="InputGroupButton_Click">
+                <TextBox.Tag>
+                    <Path Style="{DynamicResource InputGroupPathStyle}" Data="{DynamicResource PathDataSearch}"></Path>
+                </TextBox.Tag>
+            </TextBox>
+            <TextBox Text="左边带插件的输入组" Tag="@" Margin="5" Style="{DynamicResource input-group-addon left}"></TextBox>
+            <TextBox Text="右边带插件的输入组" Tag=".00" Margin="5" Style="{DynamicResource input-group-addon right}"></TextBox>
+        </StackPanel>
+    </Grid>
+</Window>

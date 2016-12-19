@@ -1,0 +1,703 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/BaseStyle.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+    <!--form-control 源码行数:2356-2391-->
+    <!--TextBox PasswordBox ComboBox CheckBox RadioButton-->
+    <!--基样式-->
+    <Style x:Key="FormControlBaseStyle" BasedOn="{StaticResource BaseStyle}" TargetType="{x:Type Control}">
+        <Setter Property="Height" Value="{DynamicResource DefaultControlHeight}"/>
+        <Setter Property="Padding" Value="{DynamicResource DefaultControlPadding}"/>
+        <Setter Property="Background" Value="{DynamicResource FormControlBackground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource FormControlBorderBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource FormControlForeground}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Control}">
+                    <Grid>
+                        <Border x:Name="border" CornerRadius="4" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <Border.Effect>
+                                <DropShadowEffect x:Name="dse" BlurRadius="8" ShadowDepth="0" Color="#9966afe9" Opacity="0"/>
+                            </Border.Effect>
+                            <Rectangle Height="1" VerticalAlignment="Top" Stroke="#000000" Opacity="0.1">
+                                <Rectangle.Effect>
+                                    <BlurEffect Radius="1"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                        </Border>
+                        <!--内容放在外面 因为阴影会对内容产生影响 Margin绑定BorderThickness是为了让padding没有误差-->
+                        <ScrollViewer x:Name="PART_ContentHost" Margin="0" Padding="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                            <Setter Property="BorderBrush" Value="#66afe9"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="#eee"/>
+                <Setter Property="Cursor" Value="No"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--TextBox-->
+    <Style BasedOn="{StaticResource FormControlBaseStyle}" TargetType="{x:Type TextBox}">
+        <Style.Triggers>
+            <Trigger Property="IsReadOnly" Value="True">
+                <Setter Property="Background" Value="#eee"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="IBeam"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--PasswordBox-->
+    <Style BasedOn="{StaticResource FormControlBaseStyle}" TargetType="{x:Type PasswordBox}">
+        <Setter Property="PasswordChar" Value="●"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="IBeam"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--验证 源码行数:2594-2683-->
+    <Style x:Key="has-success" BasedOn="{StaticResource FormControlBaseStyle}" TargetType="{x:Type Control}">
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush-Success3}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Control}">
+                    <Grid>
+                        <Border CornerRadius="4" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="0" SnapsToDevicePixels="true">
+                            <Border.Effect>
+                                <DropShadowEffect x:Name="dse" BlurRadius="8" ShadowDepth="0" Color="#67b168" Opacity="0"/>
+                            </Border.Effect>
+                            <Rectangle Height="1" VerticalAlignment="Top" Stroke="#000000" Opacity="0.1">
+                                <Rectangle.Effect>
+                                    <BlurEffect Radius="1"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                        </Border>
+                        <!--内容放在外面 因为阴影会对内容产生影响 Margin绑定BorderThickness是为了让padding没有误差-->
+                        <ScrollViewer x:Name="PART_ContentHost" Margin="{TemplateBinding BorderThickness}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                            <Setter Property="BorderBrush" Value="#2b542c"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="IBeam"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="has-warning" BasedOn="{StaticResource FormControlBaseStyle}" TargetType="{x:Type Control}">
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush-Warning3}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Control}">
+                    <Grid>
+                        <Border CornerRadius="4" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="0" SnapsToDevicePixels="true">
+                            <Border.Effect>
+                                <DropShadowEffect x:Name="dse" BlurRadius="8" ShadowDepth="0" Color="#c0a16b" Opacity="0"/>
+                            </Border.Effect>
+                            <Rectangle Height="1" VerticalAlignment="Top" Stroke="#000000" Opacity="0.1">
+                                <Rectangle.Effect>
+                                    <BlurEffect Radius="1"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                        </Border>
+                        <!--内容放在外面 因为阴影会对内容产生影响 Margin绑定BorderThickness是为了让padding没有误差-->
+                        <ScrollViewer x:Name="PART_ContentHost" Margin="{TemplateBinding BorderThickness}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                            <Setter Property="BorderBrush" Value="#66512c"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="IBeam"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="has-error" BasedOn="{StaticResource FormControlBaseStyle}" TargetType="{x:Type Control}">
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush-Danger3}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Control}">
+                    <Grid>
+                        <Border CornerRadius="4" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="0" SnapsToDevicePixels="true">
+                            <Border.Effect>
+                                <DropShadowEffect x:Name="dse" BlurRadius="8" ShadowDepth="0" Color="#ce8483" Opacity="0"/>
+                            </Border.Effect>
+                            <Rectangle Height="1" VerticalAlignment="Top" Stroke="#000000" Opacity="0.1">
+                                <Rectangle.Effect>
+                                    <BlurEffect Radius="1"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                        </Border>
+                        <!--内容放在外面 因为阴影会对内容产生影响 Margin绑定BorderThickness是为了让padding没有误差-->
+                        <ScrollViewer x:Name="PART_ContentHost" Margin="{TemplateBinding BorderThickness}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                            <Setter Property="BorderBrush" Value="#843534"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="IBeam"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--控件尺寸 源码行数:2528-2535 2547-2554-->
+    <Style x:Key="input-sm" BasedOn="{StaticResource FormControlBaseStyle}" TargetType="{x:Type Control}">
+        <Setter Property="Height" Value="{DynamicResource SmallControlHeight}"/>
+        <Setter Property="Padding" Value="{DynamicResource SmallControlPadding}"/>
+        <Setter Property="FontSize" Value="{DynamicResource SmallFontSize}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Control}">
+                    <Grid>
+                        <Border CornerRadius="3" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="0" SnapsToDevicePixels="true">
+                            <Border.Effect>
+                                <DropShadowEffect x:Name="dse" BlurRadius="8" ShadowDepth="0" Color="#9966afe9" Opacity="0"/>
+                            </Border.Effect>
+                            <Rectangle Height="1" VerticalAlignment="Top" Stroke="#000000" Opacity="0.1">
+                                <Rectangle.Effect>
+                                    <BlurEffect Radius="1"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                        </Border>
+                        <!--内容放在外面 因为阴影会对内容产生影响 Margin绑定BorderThickness是为了让padding没有误差-->
+                        <ScrollViewer x:Name="PART_ContentHost" Margin="{TemplateBinding BorderThickness}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                            <Setter Property="BorderBrush" Value="#66afe9"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="IBeam"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="#eee"/>
+                <Setter Property="Cursor" Value="No"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="input-lg" BasedOn="{StaticResource FormControlBaseStyle}" TargetType="{x:Type Control}">
+        <Setter Property="Height" Value="{DynamicResource LargeControlHeight}"/>
+        <Setter Property="Padding" Value="{DynamicResource LargeControlPadding}"/>
+        <Setter Property="FontSize" Value="{DynamicResource LargeFontSize}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Control}">
+                    <Grid>
+                        <Border CornerRadius="6" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="0" SnapsToDevicePixels="True">
+                            <Border.Effect>
+                                <DropShadowEffect x:Name="dse" BlurRadius="8" ShadowDepth="0" Color="#9966afe9" Opacity="0"/>
+                            </Border.Effect>
+                            <Rectangle Height="1" VerticalAlignment="Top" Stroke="#000000" Opacity="0.1">
+                                <Rectangle.Effect>
+                                    <BlurEffect Radius="1"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                        </Border>
+                        <!--内容放在外面 因为阴影会对内容产生影响 Margin绑定BorderThickness是为了让padding没有误差-->
+                        <ScrollViewer x:Name="PART_ContentHost" Margin="{TemplateBinding BorderThickness}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                            <Setter Property="BorderBrush" Value="#66afe9"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="IBeam"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="#eee"/>
+                <Setter Property="Cursor" Value="No"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--ComboBox-->
+    <Geometry x:Key="DownArrowGeometry">M 0 0 L 2.5 5 L 5 0 Z</Geometry>
+    <Style x:Key="ComboBoxReadonlyToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="IsTabStop" Value="false"/>
+        <Setter Property="Focusable" Value="false"/>
+        <Setter Property="ClickMode" Value="Press"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid>
+                        <Border x:Name="border" CornerRadius="4" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <Border.Effect>
+                                <DropShadowEffect x:Name="dse" BlurRadius="8" ShadowDepth="0" Color="#9966afe9" Opacity="0"/>
+                            </Border.Effect>
+                            <Rectangle Height="1" VerticalAlignment="Top" Stroke="#000000" Opacity="0.1">
+                                <Rectangle.Effect>
+                                    <BlurEffect Radius="1"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                        </Border>
+                        <Border CornerRadius="4" Margin="{TemplateBinding BorderThickness}" BorderBrush="Transparent" BorderThickness="1" Background="Transparent" HorizontalAlignment="Right" Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}">
+                            <Path x:Name="Arrow" Data="{StaticResource DownArrowGeometry}" Fill="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15">
+                                            <DoubleAnimation.EasingFunction>
+                                                <BackEase EasingMode="EaseInOut" />
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                            <Setter TargetName="border" Property="BorderBrush" Value="#66afe9"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ComboBoxEditableTextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="AllowDrop" Value="true"/>
+        <Setter Property="MinWidth" Value="0"/>
+        <Setter Property="MinHeight" Value="0"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <ScrollViewer x:Name="PART_ContentHost" Margin="0" Padding="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="IsTabStop" Value="false"/>
+        <Setter Property="Focusable" Value="false"/>
+        <Setter Property="ClickMode" Value="Press"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="Chrome" CornerRadius="4" BorderBrush="Transparent" BorderThickness="1" Background="Transparent" SnapsToDevicePixels="true" Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}">
+                        <Path x:Name="Arrow" Data="{StaticResource DownArrowGeometry}" Fill="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <ControlTemplate x:Key="ComboBoxEditableTemplate" TargetType="{x:Type ComboBox}">
+        <Grid x:Name="Placement" SnapsToDevicePixels="true">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Popup Grid.ColumnSpan="2" x:Name="PART_Popup" AllowsTransparency="true" IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom">
+                <Border x:Name="Shdw" Background="Transparent" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=Placement}">
+                    <Border x:Name="DropDownBorder" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" BorderThickness="1" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+                        <ScrollViewer x:Name="DropDownScrollViewer">
+                            <Grid RenderOptions.ClearTypeHint="Enabled">
+                                <Canvas HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
+                                    <Rectangle x:Name="OpaqueRect" Fill="{Binding Background, ElementName=DropDownBorder}" Height="{Binding ActualHeight, ElementName=DropDownBorder}" Width="{Binding ActualWidth, ElementName=DropDownBorder}"/>
+                                </Canvas>
+                                <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Contained" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </Grid>
+                        </ScrollViewer>
+                    </Border>
+                </Border>
+            </Popup>
+            <Border Grid.ColumnSpan="2" x:Name="border" CornerRadius="4" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                <Border.Effect>
+                    <DropShadowEffect x:Name="dse" BlurRadius="8" ShadowDepth="0" Color="#9966afe9" Opacity="0"/>
+                </Border.Effect>
+                <Rectangle Height="1" VerticalAlignment="Top" Stroke="#000000" Opacity="0.1">
+                    <Rectangle.Effect>
+                        <BlurEffect Radius="1"/>
+                    </Rectangle.Effect>
+                </Rectangle>
+            </Border>
+            <TextBox x:Name="PART_EditableTextBox" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource TemplatedParent}}" Style="{StaticResource ComboBoxEditableTextBox}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}"/>
+            <ToggleButton Grid.Column="1" Margin="{TemplateBinding BorderThickness}" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Style="{StaticResource ComboBoxToggleButton}"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.15">
+                                <DoubleAnimation.EasingFunction>
+                                    <BackEase EasingMode="EaseInOut" />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="dse" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15">
+                                <DoubleAnimation.EasingFunction>
+                                    <BackEase EasingMode="EaseInOut" />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+                <Setter TargetName="border" Property="BorderBrush" Value="#66afe9"/>
+            </Trigger>
+            <Trigger Property="HasItems" Value="false">
+                <Setter Property="Height" TargetName="DropDownBorder" Value="95"/>
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsGrouping" Value="true"/>
+                    <Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+            </MultiTrigger>
+            <Trigger Property="HasDropShadow" SourceName="PART_Popup" Value="true">
+                <Setter Property="Margin" TargetName="Shdw" Value="0,0,5,5"/>
+                <Setter Property="Background" TargetName="Shdw" Value="#71000000"/>
+            </Trigger>
+            <Trigger Property="ScrollViewer.CanContentScroll" SourceName="DropDownScrollViewer" Value="false">
+                <Setter Property="Canvas.Top" TargetName="OpaqueRect" Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}"/>
+                <Setter Property="Canvas.Left" TargetName="OpaqueRect" Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style BasedOn="{StaticResource FormControlBaseStyle}" TargetType="{x:Type ComboBox}">
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+                    <Grid x:Name="MainGrid" SnapsToDevicePixels="true">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" Width="0"/>
+                        </Grid.ColumnDefinitions>
+                        <Popup Grid.ColumnSpan="2" x:Name="PART_Popup" AllowsTransparency="true" IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom">
+                            <Border x:Name="Shdw" Background="Transparent" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=MainGrid}">
+                                <Border x:Name="DropDownBorder" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" BorderThickness="1" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+                                    <ScrollViewer x:Name="DropDownScrollViewer">
+                                        <Grid RenderOptions.ClearTypeHint="Enabled">
+                                            <Canvas HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
+                                                <Rectangle x:Name="OpaqueRect" Fill="{Binding Background, ElementName=DropDownBorder}" Height="{Binding ActualHeight, ElementName=DropDownBorder}" Width="{Binding ActualWidth, ElementName=DropDownBorder}"/>
+                                            </Canvas>
+                                            <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Contained" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                        </Grid>
+                                    </ScrollViewer>
+                                </Border>
+                            </Border>
+                        </Popup>
+                        <ToggleButton Grid.ColumnSpan="2" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Style="{StaticResource ComboBoxReadonlyToggleButton}"/>
+                        <Border IsHitTestVisible="false" CornerRadius="4" Margin="{TemplateBinding BorderThickness}" BorderBrush="Transparent" Background="Transparent">
+                            <ContentPresenter Margin="{TemplateBinding Padding}" ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" Content="{TemplateBinding SelectionBoxItem}" ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasDropShadow" SourceName="PART_Popup" Value="true">
+                            <Setter Property="Margin" TargetName="Shdw" Value="0,0,5,5"/>
+                            <Setter Property="Background" TargetName="Shdw" Value="#71000000"/>
+                        </Trigger>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter Property="Height" TargetName="DropDownBorder" Value="95"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsGrouping" Value="true"/>
+                                <Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                        </MultiTrigger>
+                        <Trigger Property="ScrollViewer.CanContentScroll" SourceName="DropDownScrollViewer" Value="false">
+                            <Setter Property="Canvas.Top" TargetName="OpaqueRect" Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}"/>
+                            <Setter Property="Canvas.Left" TargetName="OpaqueRect" Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEditable" Value="true">
+                <Setter Property="Template" Value="{StaticResource ComboBoxEditableTemplate}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--CheckBox-->
+    <Style x:Key="CheckBoxBaseStyle" BasedOn="{StaticResource FormControlBaseStyle}" TargetType="{x:Type CheckBox}">
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Grid SnapsToDevicePixels="true">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="14"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Width="14" Height="14" CornerRadius="4" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                            <Grid>
+                                <Path x:Name="checkedPath" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="2" Visibility="Collapsed" Data="M1,5 L4,8 9,2"/>
+                                <Rectangle x:Name="nullRec" Width="8" Height="8" RadiusX="2" RadiusY="2" Fill="{TemplateBinding BorderBrush}" Visibility="Collapsed"/>
+                            </Grid>
+                        </Border>
+                        <ContentPresenter Grid.Column="1" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="checkedPath" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="{x:Null}">
+                            <Setter TargetName="nullRec" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="HasContent" Value="true">
+                            <Setter Property="Padding" Value="4,0,0,0"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource CheckBoxBaseStyle}" TargetType="{x:Type CheckBox}"/>
+    <Style x:Key="checkbox has-success" BasedOn="{StaticResource CheckBoxBaseStyle}" TargetType="{x:Type CheckBox}">
+        <Setter Property="BorderBrush" Value="{DynamicResource Foreground-Success}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Foreground-Success}"/>
+    </Style>
+    <Style x:Key="checkbox has-warning" BasedOn="{StaticResource CheckBoxBaseStyle}" TargetType="{x:Type CheckBox}">
+        <Setter Property="BorderBrush" Value="{DynamicResource Foreground-Warning}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Foreground-Warning}"/>
+    </Style>
+    <Style x:Key="checkbox has-error" BasedOn="{StaticResource CheckBoxBaseStyle}" TargetType="{x:Type CheckBox}">
+        <Setter Property="BorderBrush" Value="{DynamicResource Foreground-Danger}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Foreground-Danger}"/>
+    </Style>
+    <!--RadioButton-->
+    <Style x:Key="RadioButtonBaseStyle" BasedOn="{StaticResource FormControlBaseStyle}" TargetType="{x:Type RadioButton}">
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid SnapsToDevicePixels="true">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="14"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Width="14" Height="14" CornerRadius="7" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                            <Ellipse x:Name="checkedEll" Width="8" Height="8" Fill="{TemplateBinding BorderBrush}" Visibility="Collapsed"/>
+                        </Border>
+                        <ContentPresenter Grid.Column="1" x:Name="Cp" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="checkedEll" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="HasContent" Value="true">
+                            <Setter Property="Padding" Value="4,0,0,0"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource RadioButtonBaseStyle}" TargetType="{x:Type RadioButton}"/>
+    <Style x:Key="radio has-success" BasedOn="{StaticResource RadioButtonBaseStyle}" TargetType="{x:Type RadioButton}">
+        <Setter Property="BorderBrush" Value="{DynamicResource Foreground-Success}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Foreground-Success}"/>
+    </Style>
+    <Style x:Key="radio has-warning" BasedOn="{StaticResource RadioButtonBaseStyle}" TargetType="{x:Type RadioButton}">
+        <Setter Property="BorderBrush" Value="{DynamicResource Foreground-Warning}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Foreground-Warning}"/>
+    </Style>
+    <Style x:Key="radio has-error" BasedOn="{StaticResource RadioButtonBaseStyle}" TargetType="{x:Type RadioButton}">
+        <Setter Property="BorderBrush" Value="{DynamicResource Foreground-Danger}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Foreground-Danger}"/>
+    </Style>
+</ResourceDictionary>

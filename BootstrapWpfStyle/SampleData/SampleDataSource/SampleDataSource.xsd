@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+      *********    请勿修改此文件     *********
+      此文件由设计工具再生成。更改
+      此文件可能会导致错误。
+-->
+<xs:schema xmlns:blend="http://schemas.microsoft.com/expression/blend/2008" xmlns:tns="Expression.Blend.SampleData.SampleDataSource" targetNamespace="Expression.Blend.SampleData.SampleDataSource" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SampleDataSource" type="tns:SampleDataSource" />
+  <xs:complexType name="SampleDataSource">
+    <xs:sequence>
+      <xs:element name="Collection" type="tns:ItemCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemCollection">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Item" type="tns:Item" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Item">
+    <xs:attribute name="Property1" type="xs:string" />
+    <xs:attribute blend:Format="Lorem ipsum" blend:FormatParameters="4,8" name="Property2" type="xs:string" />
+    <xs:attribute blend:FormatParameters="2" name="Property3" type="xs:double" />
+  </xs:complexType>
+</xs:schema>

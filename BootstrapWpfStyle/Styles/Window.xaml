@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/Colors.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/Fonts.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/Sizes.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+    <!--body 源码行数:13-15 902-908-->
+    <!--窗体样式-->
+    <!--Font针对TextBlock-->
+    <Style BasedOn="{x:Null}" TargetType="{x:Type Window}">
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontFamily}"></Setter>
+        <Setter Property="FontSize" Value="{DynamicResource DefaultFontSize}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource DefaultForeground}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource DefaultBackground}"></Setter>
+    </Style>
+</ResourceDictionary>

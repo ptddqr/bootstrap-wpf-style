@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+    <!--字体-->
+    <FontFamily x:Key="DefaultFontFamily">Helvetica Neue,Helvetica,Arial,sans-serif</FontFamily>
+    <!--字号-->
+    <System:Double x:Key="LargeFontSize">18</System:Double>
+    <System:Double x:Key="TitleFontSize">16</System:Double>
+    <System:Double x:Key="DefaultFontSize">14</System:Double>
+    <System:Double x:Key="CodeFontSize">13</System:Double>
+    <System:Double x:Key="SmallFontSize">12</System:Double>
+    
+    <!--标题-->
+    <!--字号-->
+    <System:Double x:Key="H1FontSize">36</System:Double>
+    <System:Double x:Key="H2FontSize">30</System:Double>
+    <System:Double x:Key="H3FontSize">24</System:Double>
+    <System:Double x:Key="H4FontSize">18</System:Double>
+    <System:Double x:Key="H5FontSize">14</System:Double>
+    <System:Double x:Key="H6FontSize">12</System:Double>
+    <!--加粗-->
+    <FontWeight x:Key="HFontWeight">Bold</FontWeight>
+    
+    <!--副标题-->
+    <!--字号-->
+    <System:Double x:Key="H1SmallFontSize">24</System:Double>
+    <System:Double x:Key="H2SmallFontSize">20</System:Double>
+    <System:Double x:Key="H3SmallFontSize">16</System:Double>
+    <System:Double x:Key="H4SmallFontSize">14</System:Double>
+    <System:Double x:Key="H5SmallFontSize">11</System:Double>
+    <System:Double x:Key="H6SmallFontSize">9</System:Double>
+    <!--加粗-->
+    <FontWeight x:Key="SmallFontWeight">Normal</FontWeight>
+</ResourceDictionary>

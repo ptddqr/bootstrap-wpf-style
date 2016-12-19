@@ -1,0 +1,13 @@
+﻿<Window x:Class="BootstrapWpfStyle.Win_CheckBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="复选框" Height="300" Width="300">
+    <Grid>
+        <StackPanel Margin="10">
+            <CheckBox Margin="5" Content="default"></CheckBox>
+            <CheckBox Margin="5" Content="checkbox has-success" Style="{DynamicResource checkbox has-success}" IsChecked="{x:Null}"></CheckBox>
+            <CheckBox Margin="5" Content="checkbox has-warning" Style="{DynamicResource checkbox has-warning}" IsChecked="False"></CheckBox>
+            <CheckBox Margin="5" Content="checkbox has-error" Style="{DynamicResource checkbox has-error}" IsChecked="True"></CheckBox>
+        </StackPanel>
+    </Grid>
+</Window>

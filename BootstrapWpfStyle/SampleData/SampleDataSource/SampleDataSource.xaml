@@ -1,0 +1,14 @@
+﻿<!--
+      *********    请勿修改此文件     *********
+      此文件由设计工具再生成。更改
+      此文件可能会导致错误。
+-->
+<SampleData:SampleDataSource xmlns:SampleData="clr-namespace:Expression.Blend.SampleData.SampleDataSource">
+	<SampleData:SampleDataSource.Collection>
+		<SampleData:Item Property1="Aliquam nam" Property2="Cras maecenas aliquam" Property3="62"/>
+		<SampleData:Item Property1="Aenean class maecenas integer" Property2="Class integer" Property3="64"/>
+		<SampleData:Item Property1="Curae praesent mauris accumsan" Property2="Aenean mauris" Property3="69"/>
+		<SampleData:Item Property1="Bibendum donec" Property2="Nullam curae aptent" Property3="88"/>
+        <SampleData:Item Property1="Cras nullam quisque" Property2="Quisque nam auctor donec" Property3="42"/>
+    </SampleData:SampleDataSource.Collection>
+</SampleData:SampleDataSource>

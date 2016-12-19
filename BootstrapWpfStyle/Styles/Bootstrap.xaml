@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/Window.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/Label.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/Panel.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/Button.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/DataGrid.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/ProgressBar.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/FormControl.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/InputGroup.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

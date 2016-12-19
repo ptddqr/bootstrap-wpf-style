@@ -1,0 +1,24 @@
+﻿<Window x:Class="BootstrapWpfStyle.Win_ComboBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Win_ComboBox" Height="300" Width="300">
+    <Grid>
+        <StackPanel Margin="10">
+            <ComboBox Margin="5">
+                <ComboBoxItem>苹果</ComboBoxItem>
+                <ComboBoxItem>橡胶</ComboBoxItem>
+                <ComboBoxItem>桔子</ComboBoxItem>
+            </ComboBox>
+            <ComboBox IsEditable="True" Margin="5">
+                <ComboBoxItem>苹果</ComboBoxItem>
+                <ComboBoxItem>橡胶</ComboBoxItem>
+                <ComboBoxItem>桔子</ComboBoxItem>
+            </ComboBox>
+            <ComboBox IsEnabled="False" Margin="5">
+                <ComboBoxItem>苹果</ComboBoxItem>
+                <ComboBoxItem>橡胶</ComboBoxItem>
+                <ComboBoxItem>桔子</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+    </Grid>
+</Window>

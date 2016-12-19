@@ -1,0 +1,45 @@
+﻿<Window x:Class="BootstrapWpfStyle.Win_Button"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="按钮" Height="300" Width="750">
+    <Grid>
+        <StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <Label Content="Button:" VerticalAlignment="Center"></Label>
+                <Button Margin="5" Content="default"></Button>
+                <Button Margin="5" Content="primary" Style="{DynamicResource btn-primary}"></Button>
+                <Button Margin="5" Content="success" Style="{DynamicResource btn-success}"></Button>
+                <Button Margin="5" Content="info" Style="{DynamicResource btn-info}"></Button>
+                <Button Margin="5" Content="warning" Style="{DynamicResource btn-warning}"></Button>
+                <Button Margin="5" Content="danger" Style="{DynamicResource btn-danger}"></Button>
+            </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <Label Content="Button IsEnabled=False" VerticalAlignment="Center"></Label>
+                <Button IsEnabled="False" Margin="5" Content="default"></Button>
+                <Button IsEnabled="False" Margin="5" Content="primary" Style="{DynamicResource btn-primary}"></Button>
+                <Button IsEnabled="False" Margin="5" Content="success" Style="{DynamicResource btn-success}"></Button>
+                <Button IsEnabled="False" Margin="5" Content="info" Style="{DynamicResource btn-info}"></Button>
+                <Button IsEnabled="False" Margin="5" Content="warning" Style="{DynamicResource btn-warning}"></Button>
+                <Button IsEnabled="False" Margin="5" Content="danger" Style="{DynamicResource btn-danger}"></Button>
+            </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <Label Content="ToggleButton:" VerticalAlignment="Center"></Label>
+                <ToggleButton Margin="5" Content="default"></ToggleButton>
+                <ToggleButton Margin="5" Content="primary" Style="{DynamicResource tbtn-primary}"></ToggleButton>
+                <ToggleButton Margin="5" Content="success" Style="{DynamicResource tbtn-success}"></ToggleButton>
+                <ToggleButton Margin="5" Content="info" Style="{DynamicResource tbtn-info}"></ToggleButton>
+                <ToggleButton Margin="5" Content="warning" Style="{DynamicResource tbtn-warning}"></ToggleButton>
+                <ToggleButton Margin="5" Content="danger" Style="{DynamicResource tbtn-danger}"></ToggleButton>
+            </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <Label Content="ToggleButton IsEnabled=False" VerticalAlignment="Center"></Label>
+                <ToggleButton IsEnabled="False" Margin="5" Content="default"></ToggleButton>
+                <ToggleButton IsEnabled="False" Margin="5" Content="primary" Style="{DynamicResource tbtn-primary}"></ToggleButton>
+                <ToggleButton IsEnabled="False" Margin="5" Content="success" Style="{DynamicResource tbtn-success}"></ToggleButton>
+                <ToggleButton IsEnabled="False" Margin="5" Content="info" Style="{DynamicResource tbtn-info}"></ToggleButton>
+                <ToggleButton IsEnabled="False" Margin="5" Content="warning" Style="{DynamicResource tbtn-warning}"></ToggleButton>
+                <ToggleButton IsEnabled="False" Margin="5" Content="danger" Style="{DynamicResource tbtn-danger}"></ToggleButton>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="BootstrapWpfStyle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="400" Width="600">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid>
+        <WrapPanel Button.Click="Button_Click">
+            <Button Margin="5" Content="标题和副标题" Tag="Win_HAndSmall"></Button>
+            <Button Margin="5" Content="语境" Tag="Win_Contextual"></Button>
+            <Button Margin="5" Content="面板" Tag="Win_Panel"></Button>
+            <Button Margin="5" Content="按钮" Tag="Win_Button"></Button>
+            <Button Margin="5" Content="代码" Tag="Win_Code"></Button>
+            <Button Margin="5" Content="数据表格" Tag="Win_DataGrid"></Button>
+            <Button Margin="5" Content="进度条" Tag="Win_ProgressBar"></Button>
+            <Button Margin="5" Content="输入框" Tag="Win_TextBox"></Button>
+            <Button Margin="5" Content="密码框" Tag="Win_PasswordBox"></Button>
+            <Button Margin="5"  Content="下拉框" Tag="Win_ComboBox"></Button>
+            <Button Margin="5"  Content="复选框" Tag="Win_CheckBox"></Button>
+            <Button Margin="5"  Content="单选框" Tag="Win_RadioButton"></Button>
+            <Button Margin="5"  Content="输入组" Tag="Win_InputGroup"></Button>
+        </WrapPanel>
+    </Grid>
+</Window>

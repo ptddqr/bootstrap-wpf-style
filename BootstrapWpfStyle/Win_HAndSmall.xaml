@@ -1,0 +1,44 @@
+﻿<Window x:Class="BootstrapWpfStyle.Win_HAndSmall"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="标题和副标题" Height="400" Width="600">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Margin="5">
+                <TextBlock>源码行数:990-1104</TextBlock>
+                <Label Content="标题"></Label>
+                <Label Content="h1. Bootstrap heading" Style="{DynamicResource h1}"></Label>
+                <Label Content="h2. Bootstrap heading" Style="{DynamicResource h2}"></Label>
+                <Label Content="h3. Bootstrap heading" Style="{DynamicResource h3}"></Label>
+                <Label Content="h4. Bootstrap heading" Style="{DynamicResource h4}"></Label>
+                <Label Content="h5. Bootstrap heading" Style="{DynamicResource h5}"></Label>
+                <Label Content="h6. Bootstrap heading" Style="{DynamicResource h6}"></Label>
+                <Label Content="副标题"></Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="h1. Bootstrap heading" Style="{DynamicResource h1}"></Label>
+                    <Label Content="Secondary text" Style="{DynamicResource h1 small}"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="h2. Bootstrap heading" Style="{DynamicResource h2}"></Label>
+                    <Label Content="Secondary text" Style="{DynamicResource h2 small}"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="h3. Bootstrap heading" Style="{DynamicResource h3}"></Label>
+                    <Label Content="Secondary text" Style="{DynamicResource h3 small}"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="h4. Bootstrap heading" Style="{DynamicResource h4}"></Label>
+                    <Label Content="Secondary text" Style="{DynamicResource h4 small}"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="h5. Bootstrap heading" Style="{DynamicResource h5}"></Label>
+                    <Label Content="Secondary text" Style="{DynamicResource h5 small}"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="h6. Bootstrap heading" Style="{DynamicResource h6}"></Label>
+                    <Label Content="Secondary text" Style="{DynamicResource h6 small}"></Label>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

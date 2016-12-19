@@ -1,0 +1,13 @@
+﻿<Window x:Class="BootstrapWpfStyle.Win_RadioButton"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="单选框" Height="300" Width="300">
+    <Grid>
+        <StackPanel Margin="10">
+            <RadioButton Margin="5" Content="default"></RadioButton>
+            <RadioButton Margin="5" Content="radio has-success" Style="{DynamicResource radio has-success}"></RadioButton>
+            <RadioButton Margin="5" Content="radio has-warning" Style="{DynamicResource radio has-warning}"></RadioButton>
+            <RadioButton Margin="5" Content="radio has-error" Style="{DynamicResource radio has-error}" IsChecked="True"></RadioButton>
+        </StackPanel>
+    </Grid>
+</Window>
