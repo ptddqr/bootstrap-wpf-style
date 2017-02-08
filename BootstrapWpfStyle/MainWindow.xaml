@@ -19,6 +19,7 @@
             <Button Margin="5"  Content="复选框" Tag="Win_CheckBox"></Button>
             <Button Margin="5"  Content="单选框" Tag="Win_RadioButton"></Button>
             <Button Margin="5"  Content="输入组" Tag="Win_InputGroup"></Button>
+            <Button Margin="5"  Content="字体图标" Tag="Win_Glyphicons"></Button>
         </WrapPanel>
     </Grid>
 </Window>

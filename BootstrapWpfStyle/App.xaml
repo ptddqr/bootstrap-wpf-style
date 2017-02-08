@@ -7,6 +7,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/Bootstrap.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/PathGeometries/Glyphicons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         	<SampleData:SampleDataSource x:Key="SampleDataSource" d:IsDataSource="True"/>
         </ResourceDictionary>

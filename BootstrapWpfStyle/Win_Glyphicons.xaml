@@ -1,0 +1,1439 @@
+﻿<Window x:Class="BootstrapWpfStyle.Win_Glyphicons"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Win_Glyphicons" Height="600" Width="900">
+    <Window.Resources>
+        <Style BasedOn="{StaticResource glyphicon}" TargetType="{x:Type Path}">
+            <Setter Property="Margin" Value="0,15"></Setter>
+        </Style>
+        <Style x:Key="ItemBorderStyle" TargetType="{x:Type Border}">
+            <Setter Property="Width" Value="105"></Setter>
+            <Setter Property="Height" Value="114"></Setter>
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderThickness" Value="1"></Setter>
+            <Setter Property="Margin" Value="1"></Setter>
+            <Setter Property="Padding" Value="10,0"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="BorderBrush" Value="#563D7C"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <ScrollViewer>
+            <WrapPanel>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-asterisk}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-asterisk"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-plus}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-plus"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-euro}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-euro"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-eur}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-eur"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-minus}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-minus"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-cloud}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-cloud"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-envelope}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-envelope"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-pencil}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-pencil"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-glass}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-glass"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-music}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-music"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-search}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-search"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-heart}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-heart"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-star}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-star"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-star-empty}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-star-empty"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-user}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-user"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-film}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-film"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-th-large}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-th-large"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-th}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-th"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-th-list}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-th-list"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-ok}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-ok"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-remove}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-remove"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-zoom-in}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-zoom-in"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-zoom-out}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-zoom-out"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-off}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-off"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-signal}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-signal"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-cog}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-cog"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-trash}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-trash"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-home}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-home"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-file}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-file"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-time}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-time"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-road}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-road"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-download-alt}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-download-alt"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-download}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-download"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-upload}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-upload"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-inbox}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-inbox"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-play-circle}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-play-circle"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-repeat}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-repeat"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-refresh}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-refresh"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-list-alt}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-list-alt"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-lock}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-lock"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-flag}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-flag"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-headphones}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-headphones"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-volume-off}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-volume-off"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-volume-down}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-volume-down"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-volume-up}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-volume-up"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-qrcode}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-qrcode"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-barcode}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-barcode"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-tag}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-tag"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-tags}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-tags"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-book}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-book"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-bookmark}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-bookmark"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-print}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-print"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-camera}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-camera"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-font}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-font"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-bold}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-bold"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-italic}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-italic"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-text-height}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-text-height"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-text-width}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-text-width"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-align-left}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-align-left"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-align-center}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-align-center"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-align-right}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-align-right"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-align-justify}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-align-justify"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-list}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-list"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-indent-left}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-indent-left"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-indent-right}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-indent-right"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-facetime-video}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-facetime-video"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-picture}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-picture"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-map-marker}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-map-marker"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-adjust}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-adjust"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-tint}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-tint"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-edit}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-edit"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-share}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-share"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-check}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-check"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-move}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-move"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-step-backward}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-step-backward"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-fast-backward}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-fast-backward"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-backward}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-backward"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-play}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-play"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-pause}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-pause"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-stop}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-stop"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-forward}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-forward"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-fast-forward}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-fast-forward"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-step-forward}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-step-forward"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-eject}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-eject"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-chevron-left}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-chevron-left"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-chevron-right}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-chevron-right"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-plus-sign}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-plus-sign"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-minus-sign}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-minus-sign"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-remove-sign}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-remove-sign"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-ok-sign}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-ok-sign"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-question-sign}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-question-sign"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-info-sign}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-info-sign"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-screenshot}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-screenshot"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-remove-circle}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-remove-circle"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-ok-circle}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-ok-circle"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-ban-circle}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-ban-circle"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-arrow-left}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-arrow-left"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-arrow-right}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-arrow-right"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-arrow-up}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-arrow-up"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-arrow-down}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-arrow-down"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-share-alt}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-share-alt"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-resize-full}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-resize-full"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-resize-small}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-resize-samll"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-exclamation-sign}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-exclamation-sign"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-gift}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-gift"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-leaf}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-leaf"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-fire}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-fire"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-eye-open}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-eye-open"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-eye-close}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-eye-close"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-warning-sign}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-warning-sign"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-plane}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-plane"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-calendar}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-calendar"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-random}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-random"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-comment}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-comment"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-magnet}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-magnet"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-chevron-up}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-chevron-up"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-chevron-down}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-chevron-down"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-retweet}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-retweet"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-shopping-cart}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-shopping-cart"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-folder-close}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-folder-close"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-folder-open}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-folder-open"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-resize-vertical}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-resize-vertical"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-resize-horizontal}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-resize-horizontal"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-hdd}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-hdd"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-bullhorn}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-bullhorn"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-bell}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-bell"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-certificate}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-certificate"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-thumbs-up}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-thumbs-up"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-thumbs-down}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-thumbs-down"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-hand-right}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-hand-right"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-hand-left}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-hand-left"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-hand-up}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-hand-up"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-hand-down}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-hand-down"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-circle-arrow-right}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-circle-arrow-right"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-circle-arrow-left}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-circle-arrow-left"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-circle-arrow-up}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-circle-arrow-up"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-circle-arrow-down}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-circle-arrow-down"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-globe}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-globe"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-wrench}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-wrench"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-tasks}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-tasks"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-filter}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-filter"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-briefcase}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-briefcase"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-fullscreen}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-fullscreen"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-dashboard}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-dashboard"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-paperclip}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-paperclip"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-heart-empty}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-heart-empty"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-link}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-link"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-phone}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-phone"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-pushpin}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-pushpin"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-usd}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-usd"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-gbp}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-gbp"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sort}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sort"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sort-by-alphabet}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sort-by-alphabet"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sort-by-alphabet-alt}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sort-by-alphabet-alt"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sort-by-order}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sort-by-order"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sort-by-order-alt}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sort-by-order-alt"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sort-by-attributes}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sort-by-attributes"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sort-by-attributes-alt}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sort-by-attributes-alt"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-unchecked}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-unchecked"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-expand}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-expand"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-collapse-down}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-collapse-down"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-collapse-up}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-collapse-up"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-log-in}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-log-in"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-flash}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-flash"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-log-out}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-log-out"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-new-window}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-new-window"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-record}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-record"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-save}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-save"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-open}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-open"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-saved}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-saved"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-import}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-import"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-export}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-export"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-send}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-send"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-floppy-disk}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-floppy-disk"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-floppy-saved}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-floppy-saved"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-floppy-remove}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-floppy-remove"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-floppy-save}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-floppy-save"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-floppy-open}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-floppy-open"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-credit-card}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-credit-card"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-transfer}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-transfer"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-cutlery}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-cutlery"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-header}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-header"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-compressed}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-compressed"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-earphone}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-earphone"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-phone-alt}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-phone-alt"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-tower}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-tower"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-stats}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-stats"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sd-video}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sd-video"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-hd-video}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-hd-video"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-subtitles}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-subtitles"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sound-stereo}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sound-stereo"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sound-dolby}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sound-dolby"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sound-5-1}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sound-5-1"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sound-6-1}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sound-6-1"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-sound-7-1}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-sound-7-1"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-copyright-mark}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-copyright-mark"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-registration-mark}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-registration-mark"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-cloud-download}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-cloud-download"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-cloud-upload}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-cloud-upload"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-tree-conifer}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-tree-conifer"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ItemBorderStyle}">
+                    <StackPanel>
+                        <Path Data="{DynamicResource glyphicon-tree-deciduous}"></Path>
+                        <TextBlock Text="glyphicon"></TextBlock>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="glyphicon-tree-deciduous"></TextBlock>
+                    </StackPanel>
+                </Border>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

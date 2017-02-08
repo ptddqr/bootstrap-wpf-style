@@ -9,5 +9,6 @@
         <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/ProgressBar.xaml"></ResourceDictionary>
         <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/FormControl.xaml"></ResourceDictionary>
         <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/InputGroup.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/BootstrapWpfStyle;component/Styles/Path.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
